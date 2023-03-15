@@ -1,17 +1,13 @@
-* {
-  margin: 0;
-  padding: 0;
+@media (min-width: 480px) {
+  #nav-container-mobile {
+    visibility: hidden;
+  }
 }
-
-body {
-  background-color: #e0e0e0;
-}
-
 
 /* Portrait and Landscape */
 @media (max-width: 480px) {
 
-  #nav-container {
+  #nav-container-mobile {
     position: absolute;
     bottom: 20px;
     left: 0;
@@ -23,62 +19,62 @@ body {
     align-items: center;
   }
 
-  #nav-container.active .outer-nav-item:first-of-type {
+  #nav-container-mobile.active .outer-nav-item:first-of-type {
     left: -40px;
   }
 
-  #nav-container.active .outer-nav-item:first-of-type img {
+  #nav-container-mobile.active .outer-nav-item:first-of-type img {
     transform: rotate(-180deg);
   }
 
-  #nav-container.active .outer-nav-item:last-of-type {
+  #nav-container-mobile.active .outer-nav-item:last-of-type {
     right: -40px;
   }
 
-  #nav-container.active .outer-nav-item:last-of-type img {
+  #nav-container-mobile.active .outer-nav-item:last-of-type img {
     transform: rotate(180deg);
   }
 
-  #nav-container.active #nav {
+  #nav-container-mobile.active #nav {
     width: 95%;
     border-radius: 25px;
     transition: width 0.5s ease;
   }
 
-  #nav-container.active #nav .nav-item#controller {
+  #nav-container-mobile.active #nav .nav-item#controller {
     transform: rotate(0deg);
   }
 
-  #nav-container.active #nav .nav-item:not(#controller) {
+  #nav-container-mobile.active #nav .nav-item:not(#controller) {
     transition: all 0.5s ease;
     position: absolute;
   }
 
-  #nav-container.active #nav .nav-item:not(#controller):first-of-type {
+  #nav-container-mobile.active #nav .nav-item:not(#controller):first-of-type {
     left: 12.5%;
     transform: translateX(-50%);
   }
 
-  #nav-container.active #nav .nav-item:not(#controller):nth-child(2) {
+  #nav-container-mobile.active #nav .nav-item:not(#controller):nth-child(2) {
     left: 32.5%;
     transform: translateX(-50%);
   }
 
-  #nav-container.active #nav .nav-item:not(#controller):nth-child(4) {
+  #nav-container-mobile.active #nav .nav-item:not(#controller):nth-child(4) {
     right: 32.5%;
     transform: translateX(50%);
   }
 
-  #nav-container.active #nav .nav-item:not(#controller):last-of-type {
+  #nav-container-mobile.active #nav .nav-item:not(#controller):last-of-type {
     right: 12.5%;
     transform: translateX(50%);
   }
 
-  #nav-container.active #nav .nav-item:not(#controller) img {
+  #nav-container-mobile.active #nav .nav-item:not(#controller) img {
     transform: rotate(0deg);
   }
 
-  #nav-container .outer-nav-item {
+  #nav-container-mobile .outer-nav-item {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -90,30 +86,30 @@ body {
     align-items: center;
   }
 
-  #nav-container .outer-nav-item:first-of-type {
+  #nav-container-mobile .outer-nav-item:first-of-type {
     left: 20%;
     transform: translateX(-50%);
   }
 
-  #nav-container .outer-nav-item:first-of-type img {
+  #nav-container-mobile .outer-nav-item:first-of-type img {
     transform: rotate(0deg);
   }
 
-  #nav-container .outer-nav-item:last-of-type {
+  #nav-container-mobile .outer-nav-item:last-of-type {
     right: 20%;
     transform: translateX(50%);
   }
 
-  #nav-container .outer-nav-item:last-of-type img {
+  #nav-container-mobile .outer-nav-item:last-of-type img {
     transform: rotate(0deg);
   }
 
-  #nav-container .outer-nav-item img {
+  #nav-container-mobile .outer-nav-item img {
     width: 20px;
     transition: all 0.5s ease;
   }
 
-  #nav-container #nav {
+  #nav-container-mobile #nav {
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -125,12 +121,12 @@ body {
     transition: all 0.5s ease;
   }
 
-  #nav-container #nav .nav-item {
+  #nav-container-mobile #nav .nav-item {
     display: flex;
     justify-content: center;
   }
 
-  #nav-container #nav .nav-item#controller {
+  #nav-container-mobile #nav .nav-item#controller {
     transform: rotate(45deg);
     transition: transform 0.25s ease;
     z-index: 1;
@@ -140,34 +136,34 @@ body {
     border-radius: 50%;
   }
 
-  #nav-container #nav .nav-item#controller img {
+  #nav-container-mobile #nav .nav-item#controller img {
     width: 15px;
   }
 
-  #nav-container #nav .nav-item:not(#controller) {
+  #nav-container-mobile #nav .nav-item:not(#controller) {
     position: absolute;
     transition: all 0.5s ease;
   }
 
-  #nav-container #nav .nav-item:nth-child(-n + 2) {
+  #nav-container-mobile #nav .nav-item:nth-child(-n + 2) {
     left: 50%;
     transform: translateX(-50%);
   }
 
-  #nav-container #nav .nav-item:nth-child(-n + 2) img {
+  #nav-container-mobile #nav .nav-item:nth-child(-n + 2) img {
     transform: rotate(90deg);
   }
 
-  #nav-container #nav .nav-item:nth-last-child(-n + 2) {
+  #nav-container-mobile #nav .nav-item:nth-last-child(-n + 2) {
     right: 50%;
     transform: translateX(50%);
   }
 
-  #nav-container #nav .nav-item:nth-last-child(-n + 2) img {
+  #nav-container-mobile #nav .nav-item:nth-last-child(-n + 2) img {
     transform: rotate(-90deg);
   }
 
-  #nav-container #nav .nav-item img {
+  #nav-container-mobile #nav .nav-item img {
     transition: all 0.5s ease;
     width: 25px;
   }
