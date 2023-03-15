@@ -10,7 +10,10 @@
     <title>WildBook</title>
     <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico">
     <link rel="stylesheet" href="src/style.css">
-    <script src="src/index.js"></script>
+
+    <!-- impor menu mobile -->
+    <script src="src/assets/js/menumobile.js"></script>
+    <link rel="stylesheet" href="src/assets/css/menumobile.css">
 </head>
 
 
@@ -20,14 +23,43 @@
 
     </header>
 
-    <nav class="mobile-nav">
-        <ul>
-            <li><a href="#home">Accueil</a></li>
-            <li><a href="#about me ">A propos de moi </a></li>
-            <li><a href="#messages">Messages</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+        <div id="nav-container">
+            <div class="outer-nav-item">
+                <a href="#">
+                    <img src="https://image.flaticon.com/icons/svg/34/34097.svg">
+                </a>
+            </div>
+            <div id="nav" class="closed">
+                <div class="nav-item">
+                    <a href="#">
+                        <img src="https://image.flaticon.com/icons/svg/263/263115.svg">
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#">
+                        <img src="https://image.flaticon.com/icons/svg/1745/1745138.svg">
+                    </a>
+                </div>
+                <div id="controller" class="nav-item">
+                    <img src="https://image.flaticon.com/icons/svg/70/70460.svg">
+                </div>
+                <div class="nav-item">
+                    <a href="#">
+                        <img src="https://image.flaticon.com/icons/svg/131/131155.svg">
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#">
+                        <img src="https://image.flaticon.com/icons/svg/771/771605.svg">
+                    </a>
+                </div>
+            </div>
+            <div class="outer-nav-item">
+                <a href="#">
+                    <img src="https://image.flaticon.com/icons/svg/1152/1152935.svg">
+                </a>
+            </div>
+        </div>
 
 
     <main>
