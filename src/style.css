@@ -1,27 +1,348 @@
 :root {
-    --first-color: #F65454;
-    --second-color: #F76C6C;
-    --third-color: #F99797;
-    --fourth-color: #F1F2F6;
-    --dark: black;
-    --light: white;
-  
-    --font-size: 0.75rem;
-    --title-font-size: 1.25rem;
-  
-    --spacing: 1rem;
-  }
+  --first-color: #F65454;
+  --second-color: #F76C6C;
+  --third-color: #F99797;
+  --fourth-color: #F1F2F6;
+  --fifth-color: #2F3542;
+  --dark: rgb(0, 0, 0);
+  --light: white;
+
+  --font-size: 0.75rem;
+  --title-font-size: 1.25rem;
+
+  --spacing: 1rem;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
 }
 
 body {
-    min-height: 100vh;
-    font-family: "Lato", sans-serif;
-  }
+  min-width: 360px;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  background-color: var(--fourth-color);
+}
 
-/* Do not modify the content above */
+/*--- Do not modify the content above ---*/
+
+main {
+  max-width: auto;
+  margin: 0 auto;
+  width: 90%;
+/*  margin-left: 24px;
+  margin-right: 24px;*/
+  color: #2F3542;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+}
+
+h1 {
+  font-size: 1rem;
+  color: var(--first-color);
+  margin: 0px 5px 0px 5px;
+}
+
+
+/*---------- Profile div ----------*/
+
+div img {
+  width: 50px;
+  height: 50px;
+}
+
+#profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+#info {
+  display: flex;
+  gap: var(--spacing);
+}
+
+#info p {
+  font-size: var(--font-size);
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+button {
+  border: 0;
+  text-decoration: none;
+}
+
+#notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(246, 85, 85, 0.15);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+#notification img {
+  width: 20px;
+  height: 20px;
+}
+
+/*---------- Search div ----------*/
+
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  position: relative;
+  width: 75%; 
+  background: var(--second-color);
+  border-radius: 20px;
+}
+
+input,
+#btn-search {
+  height: 2.5rem;
+  border: 1px solid var(--third-color);
+  color: var(--fifth-color);
+  font-size: 0.75rem;
+}
+
+#btn-search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  font-weight: bold;
+  background: var(--second-color);
+  border-radius: 0 20px 20px 0;
+}
+
+input[type="search"] {
+  position: relative;
+  outline: 0;
+  width: 100%;
+  padding: 0 1.6rem;
+  background: var(--light);
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0, 0, 0.43, 1.49);
+  z-index: 1;
+}
+
+input:not(:placeholder-shown) {
+  border-radius: 20px 0 0 20px;
+  width: calc(100% - 3rem);
+}
+
+.filter-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(246, 85, 85, 0.15);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.filter-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.filter-btn-clicked {
+  background-color:var(--second-color);
+}
+
+/*---------- Filter menu div ----------*/
+
+#filter-menu {
+  display: none;
+  position: relative;
+  top: 100%;
+  left: 0;
+}
+
+.show-filters {
+  display: block !important;
+  position: absolute;
+  left: 0;
+}
+
+.filters {
+  margin: 5px;
+  padding: 0.5rem 1rem;
+  background: var(--light);
+  border-radius: 20px;
+  font-size: var(--font-size);
+}
+
+.filters-clicked {
+  color: #F65454;
+  background-color: rgb(246, 85, 85, 0.15);
+  box-shadow: inset 0 0 0 1px var(--first-color);
+}
+
+/*---------- Recent profile section ----------*/
+
+#recent-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+#recent-header a {
+  font-size: var(--font-size);
+  font-weight: 500;
+  color: var(--first-color);
+  text-decoration: none;
+}
+
+#carousel {
+  width: 380px;
+  float: left;
+  white-space: nowrap;
+  overflow: visible;
+  position: relative;
+  padding: 1rem 0;
+}
+
+#carousel-holder {
+  position: relative;
+  user-select: none;
+  will-change: transform;
+  transition: all 0.5s ease-out;
+}
+
+div #carousel-holder {}
+#carousel:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.carousel-item {
+  box-shadow: 1px ;
+  position: relative;
+  width: 300px;
+  -webkit-user-drag: none;
+  height: 400px;
+  user-select: none;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 1rem;
+  transition: all 0.5s ease-out;
+  transform: scale(1);
+}
+
+.carousel-item:hover {
+  transform: scale(1.02);
+}
+
+.carousel-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  float: left;
+  box-sizing: border-box;
+  color: white;
+  height: 100%;
+  z-index: 99;
+}
+
+.title {
+  position: absolute;
+  bottom: 4rem;
+  font-weight: 700;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+  font-size: var(--title-font-size);
+  width: 100%;
+}
+
+.subtext {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 0.875rem;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+  padding: 2.5rem 2rem;
+  width: 100%;
+}
+
+.connect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  fill: var(--light);
+}
+
+.connect img {
+  width: 20px;
+  height: 20px;
+}
+
+.bg-1 {
+  background-image: url('./assets/images/IntissarOthman.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-2 {
+  background-image: url('./assets/images/EnzoCastagnos.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-3 {
+  background-image: url('./assets/images/OyhanaMajhoubi.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-4 {
+  background-image: url('./assets/images/AnthonyGorski.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-5 {
+  background-image: url('./assets/images/JFMorin.jpg');
+  background-size: cover;
+  background-position: center;
+}
 

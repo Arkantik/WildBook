@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WildBook</title>
     <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="src/style.css">
 </head>
 
 
 <body>
 
     <header>
-
+        <img src="/src/assets/images/wcs-logo.png" alt="WildBook icon">
+        <h1>WildBook</h1>
     </header>
 
     <nav>
@@ -26,12 +26,95 @@
     
     <main>
         <section>
-
+            <div id="profile">
+                <div id="info">
+                    <img src="src/assets/images/personal-PP.png" alt="personal profile picture">
+                    <span>
+                        <h3>Jane Doe</h3>
+                        <p>Developer Web and Mobile</p>
+                    </span>
+                </div>
+                <button id="notification">
+                    <img src="src/assets/icons/notif-bell.svg" alt="notification bell">
+                </button>
+            </div>
+            <div class="search">
+                <form onsubmit="event.preventDefault();" role="search">
+                    <input id="search" type="search" placeholder="Search for someone..."/>
+                    <button type="submit" id="btn-search">Go</button>
+                </form>
+                <button class="filter-btn">
+                    <img src="src/assets/icons/filters.svg" alt="filter icon">
+                </button>
+            </div>
+            <div id="filter-menu">
+                <button class="filters">Remote EN</button>
+                <button class="filters">Remote EN</button>
+                <button class="filters">Amsterdam</button>
+                <button class="filters">Barcelona</button>
+                <button class="filters">Berlin</button>
+            </div>
+            <div id="wilders-recent">
+                <div id="recent-header">
+                    <h2>Recent Profiles</h2>
+                    <a href="#section2">View More</a>
+                </div>
+                <div id="carousel">
+                    <div id="carousel-holder">
+                        <a class="carousel-item">
+                            <span class="carousel-details bg-1">
+                                <span class="title">Intissar Othman</span>
+                                <span class="subtext">Career Specialist</span>
+                                <button class="connect">
+                                    <img class="connect-icon" src="/src/assets/icons/connect.svg" alt="connect request icon">
+                                </button>
+                            </span>
+                        </a>
+                        <a target="_top" class="carousel-item" >
+                            <span class="carousel-details bg-2">
+                                <span class="title">Enzo Castagnos</span>
+                                <span class="subtext">Web Developer</span>
+                                <button class="connect">
+                                    <img class="connect-icon" src="/src/assets/icons/connect.svg" alt="connect request icon">
+                                </button>
+                            </span>
+                        </a>
+                        <a target="_top" class="carousel-item" >
+                            <span class="carousel-details bg-3">
+                                <span class="title">Oyhana Mahjoubi</span>
+                                <span class="subtext">Web Developer</span>
+                                <button class="connect">
+                                    <img class="connect-icon" src="/src/assets/icons/connect.svg" alt="connect request icon">
+                                </button>
+                            </span>
+                        </a>
+                        <a target="_top" class="carousel-item" >
+                            <span class="carousel-details bg-4">
+                                <span class="title">Anthony Gorski</span>
+                                <span class="subtext">Instructor</span>
+                                <button class="connect">
+                                    <img class="connect-icon" src="/src/assets/icons/connect.svg" alt="connect request icon">
+                                </button>
+                            </span>
+                        </a>
+                        <a class="carousel-item">
+                            <span class="carousel-details bg-5">
+                                <span class="title">Jean-François Morin</span>
+                                <span class="subtext">Instructor</span>
+                                <button class="connect">
+                                    <img class="connect-icon" src="/src/assets/icons/connect.svg" alt="connect request icon">
+                                </button>
+                            </span>
+                        </a>
+                    </div>
+                </div>            
+            </div>
         </section>
+
         <section>
 
         </section>
     </main>
-    
+    <script src="src/index.js"></script>
 </body>
 </html>
