@@ -9,17 +9,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WildBook</title>
     <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="src/style.css">
 </head>
 
 
 <body>
 
     <header>
-
+        <h1>WildBook</h1>
+        <!-- img src="/src/assets/Icons/wcs-logo.svg" alt="WildBook icon"-->
+       
     </header>
-
+    
+    <button class="openBtn">View more</button>
     <nav>
         <ul>
 
@@ -33,6 +35,7 @@
 
 
         <section>
+
             <section id="Wildersprofiles">
 
 
@@ -197,8 +200,80 @@
 
 
             </section>
-    </main>
+            
+             </section>
 
+<section class="modal hidden">
+
+    <div class="modal-content">
+    <div class ="title">
+        <h2>Intissar Othman</h2>
+        <img class="picture" src="src/assets/intissar.jpeg" alt="photo d'Intissar Othman"/>
+        <div class="job">
+            <h3>Career Specialist</h3>
+            <img class="logo" src="src/assets/logo2.png" alt="salariée Wild Code School"/>
+        </div>
+    </div>
+
+    <span class="buttons">
+        <button><img src="src/assets/message.svg" alt="accéder à la messagerie"/>Message</button>
+        <button><img src ="src/assets/connect.svg" alt="se connecter"/>Connect</button>
+    </span>
+    <hr>
+    <div class ="content">
+    
+            <h2><strong>About me</strong></h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis cupiditate esse reprehenderit quaerat facilis fugit consequuntur doloremque aperiam praesentium facere, sunt nulla eius magnam officiis officia odio doloribus eos exercitationem!</p>
+        
+
+       
+            <h2><strong>Skills</strong></h2>
+            <ul>
+        <li>Javascript</li>
+        <li>Python</li>
+        <li>React</li>
+        </ul>
+
+        <h2>Projects</h2>
+        <ul>
+        <li><a href="https://youtu.be/K-a8s8OLBSE">Project 1</a></li>
+        <li><a href="https://youtu.be/h8DLofLM7No">Project 2</a></li>
+        <li><a href="https://youtu.be/5UMCrq-bBCg">Project 3</a></li>
+        </ul>
+    </div>
+
+<span class="badge">
+
+</span>
+
+    <div class="action">
+    <button class="closeBtn">Close</button>
+</div>
+
+    <!-- Blur Oyhana <div class="overlay hidden"></div> -->
+
+    </div>
+</section>
+
+
+
+
+
+
+
+    
+    <script src="src/index.js"></script> 
 </body>
 
+
+
+
+    </main>
+
+
+
 </html>
+
+           
+
+       
