@@ -114,6 +114,7 @@ const connected = document.querySelectorAll('.connect');
     });
 });
 
+/////////// MODAL ///////
 
 const modal = document.querySelector(".modal");
 const openBtn = document.querySelector(".openBtn");
