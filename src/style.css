@@ -52,6 +52,10 @@ h1 {
   /* margin: 0px 5px 0px 5px;*/
 }
 
+#page-container {
+  display: flex;
+  flex-direction: column;
+}
 
 /*---------- Profile div ----------*/
 
@@ -219,13 +223,14 @@ input:not(:placeholder-shown) {
 }
 
 #carousel {
-  width: 380px;
+  width: 380px !important;
   float: left;
   white-space: nowrap;
-  overflow: visible;
+  overflow: hidden;
   position: relative;
   padding: 1rem 0 1rem 0;
 }
+
 
 #carousel-holder {
   position: relative;
@@ -329,7 +334,7 @@ div #carousel-holder {}
 }
 
 .bg-3 {
-  background-image: url('./assets/images/OyhanaMajhoubi.png');
+  background-image: url('./assets/images/OyhanaMahjoubi.png');
   background-size: cover;
   background-position: center;
 }
@@ -494,7 +499,6 @@ ul {
 }
 
 .profile-card {
-  display: block;
   background-color: white;
   border-radius: 25px;
   padding: 25px;
