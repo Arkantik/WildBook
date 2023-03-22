@@ -3,7 +3,7 @@
 
 const config = {
     individualItem: '.carousel-item', // class of individual item
-    carouselWidth: 380, // in px
+    carouselWidth: 360, // in px
     carouselId: '#carousel', // selector
     carouselHolderId: '#carousel-holder', // carousel should be <div id="carouselId"><div id="carouselHolderId">{items}</div></div>
 }
