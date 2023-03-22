@@ -511,7 +511,6 @@ ul {
 
 #cardscontainer {
     display: flex;
-
     flex-wrap: wrap;
     gap: 10px;
     background-color: #F1F2F6;
@@ -525,11 +524,9 @@ ul {
 }
 
 .imageronde {
-
     clip-path: ellipse(50% 50%);
     height: 75px;
     width: 75px;
-
     margin-left: 15%;
 }
 
@@ -579,6 +576,4 @@ ul {
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
     padding: 5px 10px 5px 10px;
     border-radius: 20px;
-
-
 }
