@@ -16,6 +16,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: monospace;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,10 +28,8 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-
-
-
-
-
+header {
+  display: flex;
+}
 
 /* Do not modify the content above */

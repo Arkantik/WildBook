@@ -1,13 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: monospace;
+  .logo {
+    height: 70px;
+    z-index: 999;
+    padding: 1vw;
   }
-  html {
-    scroll-behavior: smooth;
-  }
-  html body #desktop-nav {
+  html body header #desktop-nav {
     background-color: #000;
     opacity: 0.8;
     position: fixed;
@@ -15,38 +11,38 @@
     height: 10vh;
     min-height: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
-  html body #desktop-nav ul {
+  html body header #desktop-nav ul {
     width: 50%;
     list-style: none;
     display: flex;
     justify-content: space-around;
   }
-  html body #desktop-nav ul li a {
+  html body header #desktop-nav ul li a {
     color: #F65454;
     text-decoration: none;
     font-size: 1.5em;
     text-transform: uppercase;
   }
-  html body #mobile-nav {
+  html body header #mobile-nav {
     display: none;
   }
-  html body article h1, html body article p {
+  html body header article h1, html body header article p {
     color: #fff;
     text-align: center;
   }
-  html body article h1 {
+  html body header article h1 {
     font-size: 4em;
     text-transform: capitalize;
   }
-  html body article p {
+  html body header article p {
     font-size: 1.5em;
     width: 80%;
     margin-top: 10px;
   }
-  html body article section {
+  html body header article section {
     width: 100%;
     height: 100vh;
     background-position: center;
@@ -60,20 +56,16 @@
   
   
   @media (min-width: 480px) and (max-width: 1000px) {
-    html body #desktop-nav ul {
-      width: 100%;
-    }
-    html body article h1 {
+    html body header article h1 {
       font-size: 3em;
     }
   }
   @media (max-width: 480px) {
-    html body #desktop-nav {
+    html body header{
       display: none;
     }
-    html body #mobile-nav {
-      background-color: #000;
-      opacity: 0.8;
+
+    html body header #mobile-nav {
       position: fixed;
       width: 100%;
       height: 10vh;
@@ -83,13 +75,13 @@
       align-items: center;
       transition: all 0.3s linear;
     }
-    html body #mobile-nav i {
+    html body header #mobile-nav i {
       color: #fff;
       font-size: 2em;
       margin-left: 10px;
       transition: all 0.3s linear;
     }
-    html body #mobile-nav ul {
+    html body header #mobile-nav ul {
       position: absolute;
       top: 0px;
       transform: translatex(-100vw);
@@ -102,24 +94,24 @@
       align-items: center;
       transition: all 0.3s linear;
     }
-    html body #mobile-nav ul li {
+    html body header #mobile-nav ul li {
       width: 100%;
       text-align: center;
     }
-    html body #mobile-nav ul li a {
+    html body header #mobile-nav ul li a {
       color: #fff;
       text-decoration: none;
       font-size: 2em;
       text-transform: uppercase;
       border-bottom: 1px solid #fff;
     }
-    html body article h1 {
+    html body header article h1 {
       font-size: 2em;
     }
-    html body article p {
+    html body header article p {
       font-size: 1em;
     }
-    html body article #contact {
+    html body header article #contact {
       background-position: top;
     }
   }

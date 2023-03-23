@@ -45,4 +45,4 @@ navmobile.appendChild(link3);
 body.appendChild(navmobile);
 
 feather.replace();
-      document.querySelector(".nav-item").focus();
+document.querySelector(".nav-item").focus();
