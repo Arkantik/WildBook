@@ -140,7 +140,7 @@
                                 <h3>Career specialist </h3>
                             </div>
 
-                            <button class="viewmorebutton">View more</button>
+                            <button class="viewmorebutton" id="card1">View more</button>
 
                         </div>
 
@@ -155,7 +155,7 @@
                             <div class="personJob">
                                 <h3>Instructor</h3>
                             </div>
-                            <button class="viewmorebutton" type="button">View more</button>
+                            <button class="viewmorebutton" id="card2">View more</button>
                         </div>
 
                         <div class="profile-card">
@@ -171,7 +171,7 @@
                             <div class="personJob">
                                 <h3>Web developper</h3>
                             </div>
-                            <button class="viewmorebutton">View more</button>
+                            <button class="viewmorebutton" id="card3">View more</button>
                         </div>
 
                         <div class="profile-card">
@@ -185,7 +185,7 @@
                             <div class="personJob">
                                 <h3>Web developper</h3>
                             </div>
-                            <button class="viewmorebutton">View more</button>
+                            <button class="viewmorebutton" id="card4">View more</button>
                         </div>
 
                         <div class="profile-card">
@@ -199,12 +199,12 @@
                             <div class="personJob">
                                 <h3>Web developper</h3>
                             </div>
-                            <button class="viewmorebutton">View more</button>
+                            <button class="viewmorebutton" id="card5">View more</button>
                         </div>
 
                         <div class="profile-card">
 
-                            <img class="imageronde" src="/src/assets/images/Kylianpp.png" alt="Photo profil de Kylian">
+                            <img class="imageronde" src="/src/assets/images/kylian.png" alt="Photo profil de Kylian">
 
                             <div class="cardName">
                                 <h2>Kylian Gronnier</h2>
@@ -212,7 +212,7 @@
                             <div class="personJob">
                                 <h3>Web developper</h3>
                             </div>
-                            <button class="viewmorebutton">View more</button>
+                            <button class="viewmorebutton" id="card6">View more</button>
                         </div>
                     </div>
                 </div>
@@ -221,8 +221,7 @@
 
         <!-------------------- Single Profile section -------------------->
 
-        <button class="openBtn">View more</button>
-        <section class="modal hidden">
+        <div class="modal">
             <div class="modal-content">
                 <div class="title-profile">
                     <h2>Intissar Othman</h2>
@@ -256,14 +255,15 @@
                         <li><a href="https://youtu.be/h8DLofLM7No">Project 2</a></li>
                         <li><a href="https://youtu.be/5UMCrq-bBCg">Project 3</a></li>
                     </ul>
+                    <div class="action">
+                        <button class="closeBtn">Close</button>
+                    </div>
                 </div>
-                <span class="badge"></span>
-                <div class="action">
-                    <button class="closeBtn">Close</button>
-                </div>
+            
+                
             </div>
-            <!-- Blur Oyhana <div class="overlay hidden"></div> -->
-        </section>
+  
+        </div>
     </main>
     <script src="src/index.js"></script>
 </body>

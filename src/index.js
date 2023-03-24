@@ -110,7 +110,7 @@ const connected = document.querySelectorAll('.connect');
         }
         else {
             img.setAttribute('src', originalSrc);
-        }
+        
     });
 });
 
@@ -118,16 +118,74 @@ const connected = document.querySelectorAll('.connect');
 //////////////// MODAL ////////////////
 
 const modal = document.querySelector(".modal");
-const openBtn = document.querySelector(".openBtn");
 const closeBtn = document.querySelector(".closeBtn");
-const overlay = document.querySelector(".overlay");
+const title = document.querySelector(".title-profile h2:first-child");
+const job = document.querySelector(".job h3:first-child");
+const picture = document.querySelector(".picture");
+const btn1 = document.querySelector("#card1");
+const btn2 = document.querySelector("#card2");
+const btn3 = document.querySelector("#card3");
+const btn4 = document.querySelector("#card4");
+const btn5 = document.querySelector("#card5");
+const btn6 = document.querySelector("#card6");
 
 
-openBtn.addEventListener("click", function(){
-    modal.classList.remove("hidden");
-    /* Blur Oyhana overlay.classList.remove("hidden");*/
+btn1.addEventListener("click", function(){
+    modal.classList.add("show-modal");
 })
 
-closeBtn.addEventListener("click", function(){
-    modal.classList.add("hidden");
+btn2.addEventListener("click", function(){
+    title.innerHTML = "Anthony Gorski";
+    job.innerHTML = "Instructor";
+    picture.src = "/src/assets/images/AnthonyGorski.png"
+    modal.classList.add("show-modal");
 })
+
+btn3.addEventListener("click", function(){
+    title.innerHTML = "Enzo Castagnos";
+    job.innerHTML = "Web developper";
+    picture.src = "/src/assets/images/EnzoCastagnos.jpeg";
+    modal.classList.add("show-modal");
+})
+
+btn4.addEventListener("click", function(){
+    title.innerHTML = "Oyhana Mahjoubi";
+    job.innerHTML = "Web developper";
+    picture.src="/src/assets/images/OyhanaMahjoubi.png";
+    modal.classList.add("show-modal");
+})
+
+btn5.addEventListener("click", function(){
+    title.innerHTML = "Jeremy Dohin";
+    job.innerHTML = "Web developper";
+    picture.src="/src/assets/images/JeremyDohin.jpg";
+    modal.classList.add("show-modal");
+})
+
+btn6.addEventListener("click", function(){
+    title.innerHTML = "Kylian Gronier";
+    job.innerHTML = "Web developper";
+    picture.src="/src/assets/images/kylian.png";
+    modal.classList.add("show-modal");
+})
+
+closeBtn.addEventListener("click", function (){
+    modal.classList.remove("show-modal");
+})
+
+window.addEventListener("click", function (event){
+    if (event.target === modal){
+        modal.classList.remove("show-modal")
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
