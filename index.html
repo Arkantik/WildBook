@@ -9,26 +9,258 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WildBook</title>
-    <link rel="icon" type="image/x-icon" href="/src/assets/img/favicon.ico" />
-    <link rel="stylesheet" href="src/assets/css/style.css" />
-    <link rel="stylesheet" href="src/assets/css/menudesktop.css" />
-    <!-- import menu mobile -->
-    <link rel="stylesheet" href="src/assets/css/menumobile.css" />
+    <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
+    <link rel="stylesheet" href="src/style.css" />
+    <!-- <link rel="stylesheet" href="src/assets/css/menudesktop.css" /> -->
     <!-- choose one -->
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.js"></script>
   </head>
 
   <body>
     <header>
+        <!-- <img src="/src/assets/images/wcs-logo.png" alt="WildBook icon">
+        <h1>WildBook</h1> -->
     </header>
-     <!-- Menu Desktop -->
-    <script src="src/assets/js/navbardesktop.js"></script>
-    <!--  -->
-    <!-- Menu Mobile -->
-    <script src="src/assets/js/menumobile.js"></script>
-    <!--  -->
+
     <main>
+        <!------------- Carroussel -------------->
+        <section>
+            <div id="profile">
+                <div id="info">
+                    <img src="src/assets/images/personal-PP.png" alt="personal profile picture">
+                    <div>
+                        <h3>Jane Doe</h3>
+                        <p>Developer Web and Mobile</p>
+                    </div>
+                </div>
+                <button id="notification">
+                    <img src="src/assets/icons/notif-bell.svg" alt="notification bell">
+                </button>
+            </div>
+            <div class="search">
+                <form onsubmit="event.preventDefault();" role="search">
+                    <input id="search" type="search" placeholder="Search for someone...">
+                    <button type="submit" id="btn-search">Go</button>
+                </form>
+                <button class="filter-btn">
+                    <img src="src/assets/icons/filters.svg" alt="filter icon">
+                </button>
+            </div>
+            <div id="filter-menu">
+                <button class="filters">Remote EN</button>
+                <button class="filters">Remote EN</button>
+                <button class="filters">Amsterdam</button>
+                <button class="filters">Barcelona</button>
+                <button class="filters">Berlin</button>
+            </div>
+            <div id="page-container">
+                <div class="header-carousel">
+                    <div class="section-header">
+                        <h2>Recent Profiles</h2>
+                    </div>
+                    <div id="carousel">
+                        <div id="carousel-holder">
+                            <div class="carousel-item">
+                                <span class="carousel-details bg-1">
+                                    <span class="title">Intissar Othman</span>
+                                    <span class="subtext">Career Specialist</span>
+                                    <button class="connect">
+                                        <img class="connect-icon" src="/src/assets/icons/connect.svg"
+                                            alt="connect request icon">
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="carousel-item">
+                                <span class="carousel-details bg-2">
+                                    <span class="title">Enzo Castagnos</span>
+                                    <span class="subtext">Web Developer</span>
+                                    <button class="connect">
+                                        <img class="connect-icon" src="/src/assets/icons/connect.svg"
+                                            alt="connect request icon">
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="carousel-item">
+                                <span class="carousel-details bg-3">
+                                    <span class="title">Oyhana Mahjoubi</span>
+                                    <span class="subtext">Web Developer</span>
+                                    <button class="connect">
+                                        <img class="connect-icon" src="/src/assets/icons/connect.svg"
+                                            alt="connect request icon">
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="carousel-item">
+                                <span class="carousel-details bg-4">
+                                    <span class="title">Anthony Gorski</span>
+                                    <span class="subtext">Instructor</span>
+                                    <button class="connect">
+                                        <img class="connect-icon" src="/src/assets/icons/connect.svg"
+                                            alt="connect request icon">
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="carousel-item">
+                                <span class="carousel-details bg-5">
+                                    <span class="title">Jean-François Morin</span>
+                                    <span class="subtext">Instructor</span>
+                                    <button class="connect">
+                                        <img class="connect-icon" src="/src/assets/icons/connect.svg"
+                                            alt="connect request icon">
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----------- Wilders Profile ---------->
+
+                <div class="card-wilders">
+                    <div class="section-header">
+                        <h2>Wilders Profiles</h2>
+                        <a href="#cardscontainer">View More</a>
+                    </div>
+                    <div id="cardscontainer">
+                        <div class="profile-card">
+
+
+                            <img class="imageronde" src="/src/assets/images/IntissarOthman.jpg"
+                                alt="Photo profil d'Intissar">
+
+
+                            <div class="cardName">
+                                <h2>Intissar Othman</h2>
+                            </div>
+                            <div class="personJob">
+                                <h3>Career specialist </h3>
+                            </div>
+
+                            <button class="viewmorebutton" id="card1">View more</button>
+
+                        </div>
+
+                        <div class="profile-card">
+
+                            <img class="imageronde" src="/src/assets/images/AnthonyGorski.png"
+                                alt="Photo profil d'Anthony">
+
+                            <div class="cardName">
+                                <h2>Anthony Gorsky</h2>
+                            </div>
+                            <div class="personJob">
+                                <h3>Instructor</h3>
+                            </div>
+                            <button class="viewmorebutton" id="card2">View more</button>
+                        </div>
+
+                        <div class="profile-card">
+
+
+                            <img class="imageronde" src="/src/assets/images/EnzoCastagnos.jpeg"
+                                alt="Photo profil d'Enzo">
+
+                            <div class="cardName">
+
+                                <h2>Enzo Castagnos</h2>
+                            </div>
+                            <div class="personJob">
+                                <h3>Web developper</h3>
+                            </div>
+                            <button class="viewmorebutton" id="card3">View more</button>
+                        </div>
+
+                        <div class="profile-card">
+
+                            <img class="imageronde" src="/src/assets/images/OyhanaMahjoubi.png"
+                                alt="Photo profil d'Oyhana">
+
+                            <div class="cardName">
+                                <h2>Oyhana Mahjoubi</h2>
+                            </div>
+                            <div class="personJob">
+                                <h3>Web developper</h3>
+                            </div>
+                            <button class="viewmorebutton" id="card4">View more</button>
+                        </div>
+
+                        <div class="profile-card">
+
+                            <img class="imageronde" src="/src/assets/images/JeremyDohin.jpg"
+                                alt="Photo profil de Jeremy">
+
+                            <div class="cardName">
+                                <h2>Jeremy Dohin</h2>
+                            </div>
+                            <div class="personJob">
+                                <h3>Web developper</h3>
+                            </div>
+                            <button class="viewmorebutton" id="card5">View more</button>
+                        </div>
+
+                        <div class="profile-card">
+
+                            <img class="imageronde" src="/src/assets/images/kylian.png" alt="Photo profil de Kylian">
+
+                            <div class="cardName">
+                                <h2>Kylian Gronnier</h2>
+                            </div>
+                            <div class="personJob">
+                                <h3>Web developper</h3>
+                            </div>
+                            <button class="viewmorebutton" id="card6">View more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------- Single Profile section -------------------->
+
+        <div class="modal">
+            <div class="modal-content">
+                <div class="title-profile">
+                    <h2>Intissar Othman</h2>
+                    <img class="picture" src="src/assets/images/IntissarOthman.jpg" alt="photo d'Intissar Othman">
+                    <div class="job">
+                        <h3>Career Specialist</h3>
+                        <img class="logo" src="src/assets/images/logo2.png" alt="salariée Wild Code School">
+                    </div>
+                </div>
+                <span class="buttons">
+                    <button class="btn-function"><img src="src/assets/icons/message.svg"
+                            alt="accéder à la messagerie">Message</button>
+                    <button class="btn-function"><img src="src/assets/icons/connectblack.svg"
+                            alt="se connecter">Connect</button>
+                </span>
+                <hr>
+                <div class="content">
+                    <h2><strong>About me</strong></h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis cupiditate esse
+                        reprehenderit quaerat facilis fugit consequuntur doloremque aperiam praesentium facere, sunt
+                        nulla eius magnam officiis officia odio doloribus eos exercitationem!</p>
+                    <h2><strong>Skills</strong></h2>
+                    <ul>
+                        <li>Javascript</li>
+                        <li>Python</li>
+                        <li>React</li>
+                    </ul>
+                    <h2>Projects</h2>
+                    <ul>
+                        <li><a href="https://youtu.be/K-a8s8OLBSE">Project 1</a></li>
+                        <li><a href="https://youtu.be/h8DLofLM7No">Project 2</a></li>
+                        <li><a href="https://youtu.be/5UMCrq-bBCg">Project 3</a></li>
+                    </ul>
+                    <div class="action">
+                        <button class="closeBtn">Close</button>
+                    </div>
+                </div>
+            
+                
+            </div>
+  
+        </div>
     </main>
-    <footer></footer>
-  </body>
+    <script src="src/index.js"></script>
+</body>
+
 </html>
