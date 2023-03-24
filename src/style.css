@@ -35,7 +35,7 @@ main {
     width: 90%;
     /*  margin-left: 24px;
     margin-right: 24px;*/
-    color: #2F3542;
+    color: var(--fifth-color);
 }
 
 header {
@@ -43,7 +43,6 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 5px;
 }
 
 h1 {
@@ -211,7 +210,7 @@ input:not(:placeholder-shown) {
 }
 
 .filters-clicked {
-    color: #F65454;
+    color: var(--first-color);
     background-color: rgb(246, 85, 85, 0.15);
     box-shadow: inset 0 0 0 1px var(--first-color);
 }
@@ -266,8 +265,7 @@ input:not(:placeholder-shown) {
     transition: all 0.5s ease-out;
 }
 
-div #carousel-holder {}
-
+/* div #carousel-holder {} */
 #carousel:after {
     content: '';
     position: absolute;
@@ -307,7 +305,7 @@ div #carousel-holder {}
     padding: 2rem;
     float: left;
     box-sizing: border-box;
-    color: white;
+    color: var(--light);
     height: 100%;
     z-index: 99;
 }
@@ -429,8 +427,7 @@ div #carousel-holder {}
 .btn-function {
     position: relative;
     cursor: pointer;
-    align-items: center;
-    border: 1px solid #F65454;
+    border: 1px solid var(--first-color);
     background-color: var(--light);
     color: var(--second-color);
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
@@ -521,7 +518,7 @@ ul {
 
 .closeBtn{
     cursor: pointer;
-    border: 1px solid #F65454;
+    border: 1px solid var(--fifth-color);
     color: var(--dark);
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
     padding: 5px 10px 5px 10px;
@@ -536,8 +533,6 @@ ul {
     z-index: 5;
 }
 
-
-/*-------------------------------------------------------------------------------------------
   /*--------- Wilders Profile ----------*/
 
 #cardscontainer {
@@ -561,10 +556,10 @@ ul {
 }
 
 .profile-card {
-    background-color: white;
+    background-color: var(--light);
     border-radius: 25px;
     padding: 20px;
-    border: 1px solid #F65454;
+    border: 1px solid var(--first-color);
     width: 150px;
     height: 190px;
 }
@@ -600,10 +595,220 @@ ul {
     top: 5%;
     position: relative;
     cursor: pointer;
-    border: 1px solid #F65454;
+    border: 1px solid var(--first-color);
     background-color: #f997974f;
-    color: #F99797;
+    color: var(--third-color);
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
     padding: 5px 10px 5px 10px;
     border-radius: 20px;
 }
+
+  /*--------- Nav Mobile ----------*/
+
+@media (min-width: 480px) {
+    #mobile-nav {
+      visibility: hidden;
+    }
+}
+
+/* Portrait and Landscape */
+@media (max-width: 480px) {  
+html body #mobile-nav {
+    background-color: var(--dark);
+    opacity: 0.8;
+    padding: 0.875rem;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.3s linear;
+    flex-wrap: nowrap;
+    align-content: space-around;
+}
+    
+.nav-item{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--first-color);
+    padding: 0.875rem 1rem;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.nav-item span{
+    width: 0;
+    overflow: hidden;
+}
+
+.nav-item:focus{
+    text-decoration: none;
+    color: var(--light);
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: .2s;
+}
+
+.nav-item:focus span{
+    width: 100%;
+    margin-left: 0.5rem;
+    transition: .2s;
+}
+
+*:focus{
+    outline: none;
+    border: none;
+}
+}
+  
+    /* Portrait
+@media screen and (device-width: 480px) and (device-height: 800px)  and (orientation: portrait) {
+    }
+    /* Landscape */
+    /* @media screen 
+    and (device-width: 480px) 
+    and (device-height: 800px) 
+    and (orientation: landscape) {
+    } */
+
+
+   /*--------- Nav Desktop ----------*/
+
+/* .logo-nav {
+    height: 70px;
+    z-index: 99;
+    padding: 1vw;
+} */
+
+#desktop-nav {
+    background-color: var(--dark);
+    opacity: 0.8;
+    width: 100%;
+    height: 5vh;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#desktop-nav ul {
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+#desktop-nav ul li a {
+    color: var(--first-color);
+    text-decoration: none;
+    font-size: var(--title-font-size);
+    text-transform: uppercase;
+    align-items: center;
+}
+
+#mobile-nav {
+    display: none;
+}
+
+article h1, article p {
+    color: var(--light);
+    text-align: center;
+}
+
+article h1 {
+    font-size: 4em;
+    text-transform: capitalize;
+}
+
+article p {
+    font-size: 1.5em;
+    width: 80%;
+    margin-top: 10px;
+}
+  
+article section {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+@media (min-width: 480px) and (max-width: 1000px) {
+    article h1 {
+      font-size: 3em;
+    }
+}
+
+@media (max-width: 480px) {
+    html body header{
+      display: none;
+    }
+} 
+
+#mobile-nav {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    min-height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.3s linear;
+}
+
+#mobile-nav i {
+    color: var(--light);
+    font-size: 2em;
+    margin-left: 10px;
+    transition: all 0.3s linear;
+}
+
+#mobile-nav ul {
+    position: absolute;
+    top: 0px;
+    transform: translatex(-100vw);
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.3s linear;
+}
+
+#mobile-nav ul li {
+    width: 100%;
+    text-align: center;
+}
+
+#mobile-nav ul li a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--light);
+}
+
+article h1 {
+    font-size: 2em;
+}
+
+article p {
+    font-size: 1em;
+}
+
+article #contact {
+    background-position: top;
+}
+
+  
+
+
