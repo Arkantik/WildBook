@@ -109,7 +109,7 @@ const connected = document.querySelectorAll('.connect');
             img.setAttribute('src', newSrc);
         }
         else {
-            img.setAttribute('src', originalSrc);
+            img.setAttribute('src', originalSrc); 
         }
     });
 });
@@ -131,6 +131,9 @@ const btn6 = document.querySelector("#card6");
 
 
 btn1.addEventListener("click", function(){
+    title.innerHTML = "Instissar Othman";
+    job.innerHTML = "Career Specialist";
+    picture.src = "/src/assets/images/IntissarOthman.jpg"
     modal.classList.add("show-modal");
 })
 
