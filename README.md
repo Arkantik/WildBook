@@ -55,6 +55,9 @@ We thought, why would we not allow all this big community of Wilders to discuss,
 <img align="left" alt="Git" src="https://img.shields.io/badge/Git-F05033.svg?logo=git&logoColor=white"/>
 <img align="left" alt="GitHub Desktop" src="https://img.shields.io/badge/GitHub%20Desktop-8034A9.svg?logo=github&logoColor=white"/>
 <img align="left" alt="Figma" src="https://img.shields.io/badge/-Figma-F24E1E.svg?logo=figma&logoColor=white"/>
+<img align="left" alt="Discord" src="https://img.shields.io/badge/-Discord-5865F2.svg?logo=discord&logoColor=white"/>
+<img align="left" alt="Meistertask" src="https://img.shields.io/badge/-Meistertask-00aaff.svg?logo=meistertask&logoColor=white"/>
+<img align="left" alt="Google suite" src="https://img.shields.io/badge/-Google Suite-yellow.svg?logo=meistertask&logoColor=white"/>
 </p>
 
 </br>
