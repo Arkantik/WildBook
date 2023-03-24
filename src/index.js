@@ -1,6 +1,5 @@
 //////////////// CAROUSEL SCRIPT ////////////////
 
-
 const config = {
     individualItem: '.carousel-item', // class of individual item
     carouselWidth: 360, // in px
@@ -71,6 +70,23 @@ document.addEventListener("DOMContentLoaded", function(e) {
 });
 
 
+//////////////// SEARCH SCRIPT - WORK IN PROGRESS ////////////////
+
+
+// const filter = document.querySelector('#search');
+
+// let wildersSearch = []
+
+// filter.addEventListener("heyup", (event) => {
+//     wildersSearch = wilders.filter((wilders) => wilders.name.toLowerCase.includes(event.target.value.toLowerCase())
+//     );
+
+//     modalPop.innerHTML = render(wildersSearch)
+// });
+
+// modalPop.innerHTML = render(wilders)
+
+
 //////////////// FILTER BTN SCRIPT ////////////////
 
 
@@ -82,8 +98,6 @@ filterBtn.addEventListener('click', () => {
     filterBtn.classList.toggle('filter-btn-clicked');
 });
 
-
-
 const filters = document.querySelectorAll('.filters');
 
 filters.forEach(filter => {
@@ -91,7 +105,6 @@ filters.forEach(filter => {
       filter.classList.toggle('filters-clicked');
     });
 });
-
 
 
 //////////////// CONNECT BTN SCRIPT ////////////////
@@ -115,72 +128,84 @@ const connected = document.querySelectorAll('.connect');
 });
 
 
-//////////////// MODAL ////////////////
-
-const modal = document.querySelector(".modal");
-const closeBtn = document.querySelector(".closeBtn");
-const title = document.querySelector(".title-profile h2:first-child");
-const job = document.querySelector(".job h3:first-child");
-const picture = document.querySelector(".picture");
-const btn1 = document.querySelector("#card1");
-const btn2 = document.querySelector("#card2");
-const btn3 = document.querySelector("#card3");
-const btn4 = document.querySelector("#card4");
-const btn5 = document.querySelector("#card5");
-const btn6 = document.querySelector("#card6");
+//////////////// WILDERS PROFILES ////////////////
 
 
-btn1.addEventListener("click", function(){
-    title.innerHTML = "Instissar Othman";
-    job.innerHTML = "Career Specialist";
-    picture.src = "./src/assets/images/IntissarOthman.jpg"
-    modal.classList.add("show-modal");
-})
+import render from "./assets/js/wildersCards.js";
+import wilders from "./assets/js/wildersData.js";
 
-btn2.addEventListener("click", function(){
-    title.innerHTML = "Anthony Gorski";
-    job.innerHTML = "Instructor";
-    picture.src = "./src/assets/images/AnthonyGorski.png"
-    modal.classList.add("show-modal");
-})
+const cards = document.querySelector("#cardscontainer");
 
-btn3.addEventListener("click", function(){
-    title.innerHTML = "Enzo Castagnos";
-    job.innerHTML = "Web developper";
-    picture.src = "./src/assets/images/EnzoCastagnos.jpeg";
-    modal.classList.add("show-modal");
-})
+cards.innerHTML = render(wilders);
 
-btn4.addEventListener("click", function(){
-    title.innerHTML = "Oyhana Mahjoubi";
-    job.innerHTML = "Web developper";
-    picture.src="./src/assets/images/OyhanaMahjoubi.png";
-    modal.classList.add("show-modal");
-})
 
-btn5.addEventListener("click", function(){
-    title.innerHTML = "Jeremy Dohin";
-    job.innerHTML = "Web developper";
-    picture.src="./src/assets/images/JeremyDohin.jpg";
-    modal.classList.add("show-modal");
-})
+////////////////// MODAL ////////////////
 
-btn6.addEventListener("click", function(){
-    title.innerHTML = "Kylian Gronier";
-    job.innerHTML = "Web developper";
-    picture.src="./src/assets/images/kylian.png";
-    modal.classList.add("show-modal");
-})
 
-closeBtn.addEventListener("click", function (){
-    modal.classList.remove("show-modal");
-})
+// const modal = document.querySelector(".modal");
+// const closeBtn = document.querySelector(".closeBtn");
+// const title = document.querySelector(".title-profile h2:first-child");
+// const job = document.querySelector(".job h3:first-child");
+// const picture = document.querySelector(".picture");
+// const btn1 = document.querySelector("#card1");
+// const btn2 = document.querySelector("#card2");
+// const btn3 = document.querySelector("#card3");
+// const btn4 = document.querySelector("#card4");
+// const btn5 = document.querySelector("#card5");
+// const btn6 = document.querySelector("#card6");
 
-window.addEventListener("click", function (event){
-    if (event.target === modal){
-        modal.classList.remove("show-modal")
-    }
-})
+
+// btn1.addEventListener("click", function(){
+//     title.innerHTML = "Instissar Othman";
+//     job.innerHTML = "Career Specialist";
+//     picture.src = "./src/assets/images/IntissarOthman.jpg"
+//     modal.classList.add("show-modal");
+// })
+
+// btn2.addEventListener("click", function(){
+//     title.innerHTML = "Anthony Gorski";
+//     job.innerHTML = "Instructor";
+//     picture.src = "./src/assets/images/AnthonyGorski.png"
+//     modal.classList.add("show-modal");
+// })
+
+// btn3.addEventListener("click", function(){
+//     title.innerHTML = "Enzo Castagnos";
+//     job.innerHTML = "Web developper";
+//     picture.src = "./src/assets/images/EnzoCastagnos.jpeg";
+//     modal.classList.add("show-modal");
+// })
+
+// btn4.addEventListener("click", function(){
+//     title.innerHTML = "Oyhana Mahjoubi";
+//     job.innerHTML = "Web developper";
+//     picture.src="./src/assets/images/OyhanaMahjoubi.png";
+//     modal.classList.add("show-modal");
+// })
+
+// btn5.addEventListener("click", function(){
+//     title.innerHTML = "Jeremy Dohin";
+//     job.innerHTML = "Web developper";
+//     picture.src="./src/assets/images/JeremyDohin.jpg";
+//     modal.classList.add("show-modal");
+// })
+
+// btn6.addEventListener("click", function(){
+//     title.innerHTML = "Kylian Gronier";
+//     job.innerHTML = "Web developper";
+//     picture.src="./src/assets/images/kylian.png";
+//     modal.classList.add("show-modal");
+// })
+
+// closeBtn.addEventListener("click", function (){
+//     modal.classList.remove("show-modal");
+// })
+
+// window.addEventListener("click", function (event){
+//     if (event.target === modal){
+//         modal.classList.remove("show-modal")
+//     }
+// })
 
 
 //////////////// NAV MOBILE ////////////////
@@ -191,43 +216,43 @@ const body = document.querySelector('body');
 
 // Création de l'élément de navigation avec l'ID "mobile-navmobile"
 const navmobile = document.createElement('nav');
-navmobile.setAttribute('id', 'mobile-nav');
+    navmobile.setAttribute('id', 'mobile-nav');
 
 // Création du premier lien
 const link1 = document.createElement('a');
-link1.setAttribute('class', 'nav-item');
-link1.setAttribute('href', '#');
+    link1.setAttribute('class', 'nav-item');
+    link1.setAttribute('href', '#');
 const icon1 = document.createElement('i');
-icon1.setAttribute('data-feather', 'users');
+    icon1.setAttribute('data-feather', 'users');
 const text1 = document.createElement('span');
-text1.textContent = 'Profile';
-link1.appendChild(icon1);
-link1.appendChild(text1);
-navmobile.appendChild(link1);
+    text1.textContent = 'Profiles';
+    link1.appendChild(icon1);
+    link1.appendChild(text1);
+    navmobile.appendChild(link1);
 
 // Création du deuxième lien
 const link2 = document.createElement('a');
-link2.setAttribute('class', 'nav-item');
-link2.setAttribute('href', '#');
+    link2.setAttribute('class', 'nav-item');
+    link2.setAttribute('href', '#');
 const icon2 = document.createElement('i');
-icon2.setAttribute('data-feather', 'home');
+    icon2.setAttribute('data-feather', 'home');
 const text2 = document.createElement('span');
-text2.textContent = 'Home';
-link2.appendChild(icon2);
-link2.appendChild(text2);
-navmobile.appendChild(link2);
+    text2.textContent = 'Home';
+    link2.appendChild(icon2);
+    link2.appendChild(text2);
+    navmobile.appendChild(link2);
 
 // Création du troisième lien
 const link3 = document.createElement('a');
-link3.setAttribute('class', 'nav-item');
-link3.setAttribute('href', '#');
+    link3.setAttribute('class', 'nav-item');
+    link3.setAttribute('href', '#');
 const icon3 = document.createElement('i');
-icon3.setAttribute('data-feather', 'message-circle');
+    icon3.setAttribute('data-feather', 'message-circle');
 const text3 = document.createElement('span');
-text3.textContent = 'Discussion';
-link3.appendChild(icon3);
-link3.appendChild(text3);
-navmobile.appendChild(link3);
+    text3.textContent = 'Discussion';
+    link3.appendChild(icon3);
+    link3.appendChild(text3);
+    navmobile.appendChild(link3);
 
 // Ajout de la barre de navigation à l'élément body
 body.appendChild(navmobile);
