@@ -102,8 +102,8 @@ const connected = document.querySelectorAll('.connect');
     connected.forEach((element)=> {
     element.addEventListener('click', () => {
         const img = element.querySelector('img');
-        const originalSrc = '/src/assets/icons/connect.svg';
-        const newSrc = '/src/assets/icons/connected.svg';
+        const originalSrc = './src/assets/icons/connect.svg';
+        const newSrc = './src/assets/icons/connected.svg';
 
         if (img.getAttribute('src') === originalSrc) {
             img.setAttribute('src', newSrc);
@@ -133,42 +133,42 @@ const btn6 = document.querySelector("#card6");
 btn1.addEventListener("click", function(){
     title.innerHTML = "Instissar Othman";
     job.innerHTML = "Career Specialist";
-    picture.src = "/src/assets/images/IntissarOthman.jpg"
+    picture.src = "./src/assets/images/IntissarOthman.jpg"
     modal.classList.add("show-modal");
 })
 
 btn2.addEventListener("click", function(){
     title.innerHTML = "Anthony Gorski";
     job.innerHTML = "Instructor";
-    picture.src = "/src/assets/images/AnthonyGorski.png"
+    picture.src = "./src/assets/images/AnthonyGorski.png"
     modal.classList.add("show-modal");
 })
 
 btn3.addEventListener("click", function(){
     title.innerHTML = "Enzo Castagnos";
     job.innerHTML = "Web developper";
-    picture.src = "/src/assets/images/EnzoCastagnos.jpeg";
+    picture.src = "./src/assets/images/EnzoCastagnos.jpeg";
     modal.classList.add("show-modal");
 })
 
 btn4.addEventListener("click", function(){
     title.innerHTML = "Oyhana Mahjoubi";
     job.innerHTML = "Web developper";
-    picture.src="/src/assets/images/OyhanaMahjoubi.png";
+    picture.src="./src/assets/images/OyhanaMahjoubi.png";
     modal.classList.add("show-modal");
 })
 
 btn5.addEventListener("click", function(){
     title.innerHTML = "Jeremy Dohin";
     job.innerHTML = "Web developper";
-    picture.src="/src/assets/images/JeremyDohin.jpg";
+    picture.src="./src/assets/images/JeremyDohin.jpg";
     modal.classList.add("show-modal");
 })
 
 btn6.addEventListener("click", function(){
     title.innerHTML = "Kylian Gronier";
     job.innerHTML = "Web developper";
-    picture.src="/src/assets/images/kylian.png";
+    picture.src="./src/assets/images/kylian.png";
     modal.classList.add("show-modal");
 })
 
