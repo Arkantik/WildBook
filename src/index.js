@@ -249,7 +249,7 @@ const link3 = document.createElement('a');
 const icon3 = document.createElement('i');
     icon3.setAttribute('data-feather', 'message-circle');
 const text3 = document.createElement('span');
-    text3.textContent = 'Discussion';
+    text3.textContent = 'Wilders Hub';
     link3.appendChild(icon3);
     link3.appendChild(text3);
     navmobile.appendChild(link3);
@@ -281,7 +281,7 @@ nav.id = "desktop-nav";
 const ul = document.createElement("ul");
 
 // Ajout des liens dans la liste
-const links = ["Home", "Wilders Profiles", "Discussion"];
+const links = ["Home", "Profiles", "Wilders Hub"];
 for (const link of links) {
   const li = document.createElement("li");
   const a = document.createElement("a");
