@@ -70,3 +70,8 @@ We thought, why would we not allow all this big community of Wilders to discuss,
 - Oyhana Mahjoubi : https://github.com/OyhanaM
 - Kylian Gronnier : https://github.com/Kyxk
 - Jeremy Dohin : https://github.com/Arkantik
+
+</br>
+
+<em><strong>Note</strong>: This project has been created following the Project 1 of the Web & Mobile developer certification at WildCodeSchool.</em>
+
