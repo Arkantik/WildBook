@@ -226,7 +226,7 @@ input:not(:placeholder-shown) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-width: auto;
+    width: 100%;
 }
 
 .section-header a {
@@ -243,7 +243,7 @@ input:not(:placeholder-shown) {
     padding: 1rem 0 1rem 0;
 }
 
-.header-carousel {
+.carousel-container {
     width: 100%;
     display: flex;
     flex-direction: column;
