@@ -232,11 +232,13 @@ const ul = document.createElement("ul");
 
 // Ajout des liens dans la liste
 const links = ["Home", "Profiles", "Wilders Hub"];
-for (const link of links) {
+const linkUrls = ["#Home", "#cards-container", "#WildersHub"];
+
+for (let i = 0; i < links.length; i++) {
   const li = document.createElement("li");
   const a = document.createElement("a");
-  a.href = "#" + link;
-  a.textContent = link;
+  a.href = linkUrls[i];
+  a.textContent = links[i];
   li.appendChild(a);
   ul.appendChild(li);
 }
