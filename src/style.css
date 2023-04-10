@@ -63,6 +63,173 @@ section {
     flex-direction: column;
     gap: 1rem;
 }
+
+button {
+    border: 0;
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--second-color);
+    color: var(--fourth-color);
+    text-align: center;
+    font-size: var(--font-size);
+}
+
+/*--------- Nav Mobile ----------*/
+
+@media (min-width: 480px) {
+    #mobile-nav {
+      visibility: hidden;
+    }
+}
+
+/* Portrait and Landscape */
+@media (max-width: 480px) {  
+html body #mobile-nav {
+    background-color: var(--dark);
+    opacity: 0.8;
+    padding: 0.875rem;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.3s linear;
+    flex-wrap: nowrap;
+    align-content: space-around;
+}
+    
+.nav-item{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--first-color);
+    padding: 0.875rem 1rem;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.nav-item span{
+    width: 0;
+    overflow: hidden;
+}
+
+.nav-item:focus{
+    text-decoration: none;
+    color: var(--light);
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: .2s;
+}
+
+.nav-item:focus span{
+    width: 100%;
+    margin-left: 0.5rem;
+    transition: .2s;
+}
+
+*:focus{
+    outline: none;
+    border: none;
+}
+}
+
+/*--------- Nav Desktop ----------*/
+
+.logo-nav {
+    height: 70px;
+    z-index: 99;
+    padding: 1vw;
+}
+
+#desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--dark);
+    opacity: 0.8;
+    height: 5vh;
+    padding: 0 2rem 0 2rem;
+}
+
+#desktop-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 0;
+}
+
+#desktop-nav a {
+    color: var(--first-color);
+    text-decoration: none;
+    font-size: var(--title-font-size);
+    align-items: center;
+}
+
+#mobile-nav {
+    display: none;
+}
+  
+@media (min-width: 480px) and (max-width: 1000px) {
+    article h1 {
+      font-size: 3em;
+    }
+}
+
+@media (max-width: 480px) {
+    html body header{
+      display: none;
+    }
+} 
+
+#mobile-nav {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    min-height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.3s linear;
+}
+
+#mobile-nav i {
+    color: var(--light);
+    font-size: 2em;
+    margin-left: 10px;
+    transition: all 0.3s linear;
+}
+
+#mobile-nav ul {
+    position: absolute;
+    top: 0px;
+    transform: translatex(-100vw);
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.3s linear;
+}
+
+#mobile-nav ul li {
+    width: 100%;
+    text-align: center;
+}
+
+#mobile-nav ul li a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--light);
+}
+
 /*---------- Profile div ----------*/
 
 div img {
@@ -87,11 +254,6 @@ div img {
     font-size: var(--font-size);
     font-weight: 500;
     opacity: 0.5;
-}
-
-button {
-    border: 0;
-    text-decoration: none;
 }
 
 #notification {
@@ -610,159 +772,7 @@ ul {
     z-index: 5;
 }
 
-  /*--------- Nav Mobile ----------*/
 
-@media (min-width: 480px) {
-    #mobile-nav {
-      visibility: hidden;
-    }
-}
-
-/* Portrait and Landscape */
-@media (max-width: 480px) {  
-html body #mobile-nav {
-    background-color: var(--dark);
-    opacity: 0.8;
-    padding: 0.875rem;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    transition: all 0.3s linear;
-    flex-wrap: nowrap;
-    align-content: space-around;
-}
-    
-.nav-item{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--first-color);
-    padding: 0.875rem 1rem;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-.nav-item span{
-    width: 0;
-    overflow: hidden;
-}
-
-.nav-item:focus{
-    text-decoration: none;
-    color: var(--light);
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: .2s;
-}
-
-.nav-item:focus span{
-    width: 100%;
-    margin-left: 0.5rem;
-    transition: .2s;
-}
-
-*:focus{
-    outline: none;
-    border: none;
-}
-}
-
-   /*--------- Nav Desktop ----------*/
-
-.logo-nav {
-    height: 70px;
-    z-index: 99;
-    padding: 1vw;
-}
-
-#desktop-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: var(--dark);
-    opacity: 0.8;
-    height: 5vh;
-    padding: 0 2rem 0 2rem;
-}
-
-#desktop-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    gap: 2rem;
-    padding: 0;
-}
-
-#desktop-nav a {
-    color: var(--first-color);
-    text-decoration: none;
-    font-size: var(--title-font-size);
-    align-items: center;
-}
-
-#mobile-nav {
-    display: none;
-}
-  
-@media (min-width: 480px) and (max-width: 1000px) {
-    article h1 {
-      font-size: 3em;
-    }
-}
-
-@media (max-width: 480px) {
-    html body header{
-      display: none;
-    }
-} 
-
-#mobile-nav {
-    position: fixed;
-    width: 100%;
-    height: 10vh;
-    min-height: 50px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    transition: all 0.3s linear;
-}
-
-#mobile-nav i {
-    color: var(--light);
-    font-size: 2em;
-    margin-left: 10px;
-    transition: all 0.3s linear;
-}
-
-#mobile-nav ul {
-    position: absolute;
-    top: 0px;
-    transform: translatex(-100vw);
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    transition: all 0.3s linear;
-}
-
-#mobile-nav ul li {
-    width: 100%;
-    text-align: center;
-}
-
-#mobile-nav ul li a {
-    color: var(--light);
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--light);
-}
 
 
   
