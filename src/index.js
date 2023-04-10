@@ -77,9 +77,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 // let wildersSearch = []
 
-// filter.addEventListener("heyup", (event) => {
-//     wildersSearch = wilders.filter((wilders) => wilders.name.toLowerCase.includes(event.target.value.toLowerCase())
-//     );
+// filter.addEventListener("keyup", (event) => {
+//    wildersSearch = wilders.filter((wilders) => wilders.name.toLowerCase.includes(event.target.value.toLowerCase())
+//    );
 
 //     modalPop.innerHTML = render(wildersSearch)
 // });
@@ -134,7 +134,7 @@ const connected = document.querySelectorAll('.connect');
 import render from "./assets/js/wildersCards.js";
 import wilders from "./assets/js/wildersData.js";
 
-const cards = document.querySelector("#cardscontainer");
+const cards = document.querySelector("#cards-container");
 
 cards.innerHTML = render(wilders);
 
@@ -142,70 +142,20 @@ cards.innerHTML = render(wilders);
 ////////////////// MODAL ////////////////
 
 
-// const modal = document.querySelector(".modal");
-// const closeBtn = document.querySelector(".closeBtn");
-// const title = document.querySelector(".title-profile h2:first-child");
-// const job = document.querySelector(".job h3:first-child");
-// const picture = document.querySelector(".picture");
-// const btn1 = document.querySelector("#card1");
-// const btn2 = document.querySelector("#card2");
-// const btn3 = document.querySelector("#card3");
-// const btn4 = document.querySelector("#card4");
-// const btn5 = document.querySelector("#card5");
-// const btn6 = document.querySelector("#card6");
+const modal = document.querySelector(".modal");
+const btn = document.querySelector(".profile-card");
+const overlay = document.querySelector(".overlay");
+const closeBtn = document.querySelector(".closeBtn");
 
+btn.addEventListener("click", function() {
+    overlay.classList.add("is-visible");
+    modal.classList.add("is-visible");
+  });
 
-// btn1.addEventListener("click", function(){
-//     title.innerHTML = "Instissar Othman";
-//     job.innerHTML = "Career Specialist";
-//     picture.src = "./src/assets/images/IntissarOthman.jpg"
-//     modal.classList.add("show-modal");
-// })
-
-// btn2.addEventListener("click", function(){
-//     title.innerHTML = "Anthony Gorski";
-//     job.innerHTML = "Instructor";
-//     picture.src = "./src/assets/images/AnthonyGorski.png"
-//     modal.classList.add("show-modal");
-// })
-
-// btn3.addEventListener("click", function(){
-//     title.innerHTML = "Enzo Castagnos";
-//     job.innerHTML = "Web developper";
-//     picture.src = "./src/assets/images/EnzoCastagnos.jpeg";
-//     modal.classList.add("show-modal");
-// })
-
-// btn4.addEventListener("click", function(){
-//     title.innerHTML = "Oyhana Mahjoubi";
-//     job.innerHTML = "Web developper";
-//     picture.src="./src/assets/images/OyhanaMahjoubi.png";
-//     modal.classList.add("show-modal");
-// })
-
-// btn5.addEventListener("click", function(){
-//     title.innerHTML = "Jeremy Dohin";
-//     job.innerHTML = "Web developper";
-//     picture.src="./src/assets/images/JeremyDohin.jpg";
-//     modal.classList.add("show-modal");
-// })
-
-// btn6.addEventListener("click", function(){
-//     title.innerHTML = "Kylian Gronier";
-//     job.innerHTML = "Web developper";
-//     picture.src="./src/assets/images/kylian.png";
-//     modal.classList.add("show-modal");
-// })
-
-// closeBtn.addEventListener("click", function (){
-//     modal.classList.remove("show-modal");
-// })
-
-// window.addEventListener("click", function (event){
-//     if (event.target === modal){
-//         modal.classList.remove("show-modal")
-//     }
-// })
+closeBtn.addEventListener('click', function() {
+    overlay.classList.remove('is-visible');
+    modal.classList.remove('is-visible');
+  });
 
 
 //////////////// NAV MOBILE ////////////////
@@ -221,7 +171,7 @@ const navmobile = document.createElement('nav');
 // Création du premier lien
 const link1 = document.createElement('a');
     link1.setAttribute('class', 'nav-item');
-    link1.setAttribute('href', '#');
+    link1.setAttribute('href', '#cards-container');
 const icon1 = document.createElement('i');
     icon1.setAttribute('data-feather', 'users');
 const text1 = document.createElement('span');
@@ -269,9 +219,9 @@ const header = document.querySelector('header');
 
 // Création de l'élément img
 const logo = document.createElement("img");
-// logo.className = "logo-nav";
-// logo.src = "./src/assets/images/wcs-logo.png";
-// logo.alt = "Logo";
+logo.className = "logo-nav";
+logo.src = "./src/assets/icons/wcs-logo.svg";
+logo.alt = "WildBook Logo";
 
 // Création de l'élément nav
 const nav = document.createElement("nav");
@@ -282,11 +232,13 @@ const ul = document.createElement("ul");
 
 // Ajout des liens dans la liste
 const links = ["Home", "Profiles", "Wilders Hub"];
-for (const link of links) {
+const linkUrls = ["#Home", "#cards-container", "#WildersHub"];
+
+for (let i = 0; i < links.length; i++) {
   const li = document.createElement("li");
   const a = document.createElement("a");
-  a.href = "#" + link;
-  a.textContent = link;
+  a.href = linkUrls[i];
+  a.textContent = links[i];
   li.appendChild(a);
   ul.appendChild(li);
 }
