@@ -736,25 +736,19 @@ a {
 .action {
     display: flex;
     justify-content: center;
-    padding-top: 0.5rem;
-    font-size: var(--font-size);
-    opacity: 0.5;
 }
 
-
-.closeBtn:hover{
-    background-color: var(--first-color);
-}
-
-.closeBtn{
+.closeBtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
     cursor: pointer;
-    border: 1px solid var(--fifth-color);
-    color: var(--dark);
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-    padding: 5px 10px 5px 10px;
-    border-radius: 20px;
-}
+  }
 
+  .closeBtn img {
+    width: 30px;
+    height: 30px;
+  }
 /* .show-modal{
     opacity: 1;
     visibility: visible;

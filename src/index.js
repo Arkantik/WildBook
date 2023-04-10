@@ -152,10 +152,15 @@ btn.addEventListener("click", function() {
     modal.classList.add("is-visible");
   });
 
-overlay.addEventListener("click", function() {
-    overlay.classList.remove("is-visible");
-    modal.classList.remove("is-visible");
-});
+closeBtn.addEventListener('click', function() {
+    overlay.classList.remove('is-visible');
+    modal.classList.remove('is-visible');
+  });
+
+// overlay.addEventListener("click", function() {
+//     overlay.classList.remove("is-visible");
+//     modal.classList.remove("is-visible");
+// });
 
 
 //////////////// NAV MOBILE ////////////////
