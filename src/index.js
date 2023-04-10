@@ -144,9 +144,6 @@ cards.innerHTML = render(wilders);
 
 const modal = document.querySelector(".modal");
 const closeBtn = document.querySelector(".closeBtn");
-const title = document.querySelector(".title-profile h2:first-child");
-const job = document.querySelector(".job h3:first-child");
-const picture = document.querySelector(".picture");
 const btn = document.querySelector(".profile-card");
 const overlay = document.querySelector(".overlay");
 
@@ -159,28 +156,6 @@ overlay.addEventListener("click", function() {
     overlay.classList.remove("is-visible");
     modal.classList.remove("is-visible");
 });
-
-closeBtn.addEventListener("click", function() {
-    overlay.classList.remove("is-visible");
-    modal.classList.remove("is-visible");
-});
-
-// btn1.addEventListener("click", function(){
-//     title.innerHTML = "${wilders.name}";
-//     job.innerHTML = "Career Specialist";
-//     picture.src = "./src/assets/images/IntissarOthman.jpg"
-//     modal.classList.add("show-modal");
-// })
-
-// closeBtn.addEventListener("click", function (){
-//     modal.classList.remove("show-modal");
-// })
-
-// window.addEventListener("click", function (event){
-//     if (event.target === modal){
-//         modal.classList.remove("show-modal")
-//     }
-// })
 
 
 //////////////// NAV MOBILE ////////////////
