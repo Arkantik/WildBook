@@ -667,9 +667,9 @@ input:not(:placeholder-shown) {
 }
 
 .logo {
-    clip-path: ellipse(40% 40%);
-    height: 25px;
-    width: 25px;
+    clip-path: ellipse(45% 45%);
+    height: 30px;
+    width: 30px;
 }
 
 .buttons {
@@ -708,20 +708,15 @@ hr {
     width: 100%;
 }
 
-li {
+.content li {
     list-style: none;
     font-size: var(--font-size);
     padding-left: 0rem;
 }
 
-a {
+.content a {
     text-decoration: none;
     color: var(--fifth-color);
-
-}
-
-.content h2 {
-    font-size: var(--title-font-size);
 }
 
 .content {
@@ -734,10 +729,11 @@ a {
     font-size: var(--font-size);
 }
 
-.action {
-    display: flex;
-    justify-content: center;
+.content h2 {
+    font-size: var(--title-font-size);
 }
+
+
 
 .closeBtn {
     position: absolute;
