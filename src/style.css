@@ -585,11 +585,13 @@ input:not(:placeholder-shown) {
     color: var(--fifth-color);
     font-weight: 600;
     font-size: 0.875rem;
+    text-align: center;
 }
 
 .personJob {
     color: rgb(165, 164, 164);
     font-size: var(--font-size);
+    text-align: center;
 }
 
 .viewmorebutton {
