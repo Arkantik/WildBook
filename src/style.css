@@ -238,6 +238,7 @@ input:not(:placeholder-shown) {
     white-space: nowrap;
     overflow: hidden;
     padding: 1rem 0 1rem 0;
+    max-width: 1000px;
 }
 
 .header-carousel {
@@ -614,7 +615,7 @@ ul {
 /* Portrait and Landscape */
 @media (max-width: 480px) {  
 html body #mobile-nav {
-    background-color: var(--dark);
+    background-color: var(--fifth-color);
     opacity: 0.8;
     padding: 0.875rem;
     position: fixed;
@@ -682,68 +683,35 @@ html body #mobile-nav {
 } */
 
 #desktop-nav {
-    background-color: var(--dark);
     opacity: 0.8;
     width: 100%;
-    height: 5vh;
+    height: 3vh;
     min-height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--fifth-color);
 }
 
 #desktop-nav ul {
-    width: 50%;
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0;
+    margin-right: 3rem;
 }
 
 #desktop-nav ul li a {
     color: var(--first-color);
     text-decoration: none;
-    font-size: var(--title-font-size);
-    text-transform: uppercase;
+    font-size: 1rem;
     align-items: center;
+    padding: 0 1rem 0 1rem;
+    text-transform: uppercase;
 }
 
 #mobile-nav {
     display: none;
-}
-
-article h1, article p {
-    color: var(--light);
-    text-align: center;
-}
-
-article h1 {
-    font-size: 4em;
-    text-transform: capitalize;
-}
-
-article p {
-    font-size: 1.5em;
-    width: 80%;
-    margin-top: 10px;
-}
-  
-article section {
-    width: 100%;
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-  
-@media (min-width: 480px) and (max-width: 1000px) {
-    article h1 {
-      font-size: 3em;
-    }
 }
 
 @media (max-width: 480px) {
@@ -755,7 +723,7 @@ article section {
 #mobile-nav {
     position: fixed;
     width: 100%;
-    height: 10vh;
+    height: 5vh;
     min-height: 50px;
     display: flex;
     justify-content: flex-start;
@@ -774,7 +742,6 @@ article section {
     position: absolute;
     top: 0px;
     transform: translatex(-100vw);
-    background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     height: 100vh;
     display: flex;
@@ -795,18 +762,6 @@ article section {
     font-size: 2em;
     text-transform: uppercase;
     border-bottom: 1px solid var(--light);
-}
-
-article h1 {
-    font-size: 2em;
-}
-
-article p {
-    font-size: 1em;
-}
-
-article #contact {
-    background-position: top;
 }
 
   
