@@ -134,7 +134,7 @@ const connected = document.querySelectorAll('.connect');
 import render from "./assets/js/wildersCards.js";
 import wilders from "./assets/js/wildersData.js";
 
-const cards = document.querySelector("#cardscontainer");
+const cards = document.querySelector("#cards-container");
 
 cards.innerHTML = render(wilders);
 

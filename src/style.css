@@ -388,7 +388,7 @@ input:not(:placeholder-shown) {
     gap: 1rem;
 }
 
-#cardscontainer {
+#cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -396,6 +396,7 @@ input:not(:placeholder-shown) {
     gap: 1rem;
     background-color: #F1F2F6;
     padding: none;
+    padding-bottom: 1rem;
 }
 
 .imageronde {
@@ -609,8 +610,6 @@ ul {
     z-index: 5;
 }
 
-  
-
   /*--------- Nav Mobile ----------*/
 
 @media (min-width: 480px) {
@@ -669,17 +668,6 @@ html body #mobile-nav {
     border: none;
 }
 }
-  
-    /* Portrait
-@media screen and (device-width: 480px) and (device-height: 800px)  and (orientation: portrait) {
-    }
-    /* Landscape */
-    /* @media screen 
-    and (device-width: 480px) 
-    and (device-height: 800px) 
-    and (orientation: landscape) {
-    } */
-
 
    /*--------- Nav Desktop ----------*/
 
@@ -718,34 +706,6 @@ html body #mobile-nav {
 
 #mobile-nav {
     display: none;
-}
-
-article h1, article p {
-    color: var(--light);
-    text-align: center;
-}
-
-article h1 {
-    font-size: 4em;
-    text-transform: capitalize;
-}
-
-article p {
-    font-size: 1.5em;
-    width: 80%;
-    margin-top: 10px;
-}
-  
-article section {
-    width: 100%;
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
   
 @media (min-width: 480px) and (max-width: 1000px) {
@@ -805,17 +765,6 @@ article section {
     border-bottom: 1px solid var(--light);
 }
 
-article h1 {
-    font-size: 2em;
-}
-
-article p {
-    font-size: 1em;
-}
-
-article #contact {
-    background-position: top;
-}
 
   
 
