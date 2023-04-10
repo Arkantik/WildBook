@@ -171,7 +171,7 @@ const navmobile = document.createElement('nav');
 // Création du premier lien
 const link1 = document.createElement('a');
     link1.setAttribute('class', 'nav-item');
-    link1.setAttribute('href', '#');
+    link1.setAttribute('href', '#cards-container');
 const icon1 = document.createElement('i');
     icon1.setAttribute('data-feather', 'users');
 const text1 = document.createElement('span');
@@ -219,9 +219,9 @@ const header = document.querySelector('header');
 
 // Création de l'élément img
 const logo = document.createElement("img");
-// logo.className = "logo-nav";
-// logo.src = "./src/assets/images/wcs-logo.png";
-// logo.alt = "Logo";
+logo.className = "logo-nav";
+logo.src = "./src/assets/icons/wcs-logo.svg";
+logo.alt = "WildBook Logo";
 
 // Création de l'élément nav
 const nav = document.createElement("nav");

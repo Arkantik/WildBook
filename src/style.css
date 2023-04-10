@@ -132,9 +132,10 @@ html body #mobile-nav {
 /*--------- Nav Desktop ----------*/
 
 .logo-nav {
-    height: 70px;
-    z-index: 99;
-    padding: 1vw;
+    height: 30px;
+    padding: 2px;
+    background-color: #F65454;
+    clip-path: ellipse(50% 50%);
 }
 
 #desktop-nav {
@@ -764,7 +765,6 @@ a {
     z-index: 2;
     background-color: rgba(0,0,0,0.7);
 }
-  
 
 .is-visible {
     opacity: 1;
