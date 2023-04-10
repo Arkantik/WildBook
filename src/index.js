@@ -77,9 +77,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 // let wildersSearch = []
 
-// filter.addEventListener("heyup", (event) => {
-//     wildersSearch = wilders.filter((wilders) => wilders.name.toLowerCase.includes(event.target.value.toLowerCase())
-//     );
+// filter.addEventListener("keyup", (event) => {
+//    wildersSearch = wilders.filter((wilders) => wilders.name.toLowerCase.includes(event.target.value.toLowerCase())
+//    );
 
 //     modalPop.innerHTML = render(wildersSearch)
 // });
@@ -142,58 +142,33 @@ cards.innerHTML = render(wilders);
 ////////////////// MODAL ////////////////
 
 
-// const modal = document.querySelector(".modal");
-// const closeBtn = document.querySelector(".closeBtn");
-// const title = document.querySelector(".title-profile h2:first-child");
-// const job = document.querySelector(".job h3:first-child");
-// const picture = document.querySelector(".picture");
-// const btn1 = document.querySelector("#card1");
-// const btn2 = document.querySelector("#card2");
-// const btn3 = document.querySelector("#card3");
-// const btn4 = document.querySelector("#card4");
-// const btn5 = document.querySelector("#card5");
-// const btn6 = document.querySelector("#card6");
+const modal = document.querySelector(".modal");
+const closeBtn = document.querySelector(".closeBtn");
+const title = document.querySelector(".title-profile h2:first-child");
+const job = document.querySelector(".job h3:first-child");
+const picture = document.querySelector(".picture");
+const btn = document.querySelector(".profile-card");
+const overlay = document.querySelector(".overlay");
 
+btn.addEventListener("click", function() {
+    overlay.classList.add("is-visible");
+    modal.classList.add("is-visible");
+  });
+
+overlay.addEventListener("click", function() {
+    overlay.classList.remove("is-visible");
+    modal.classList.remove("is-visible");
+});
+
+closeBtn.addEventListener("click", function() {
+    overlay.classList.remove("is-visible");
+    modal.classList.remove("is-visible");
+});
 
 // btn1.addEventListener("click", function(){
-//     title.innerHTML = "Instissar Othman";
+//     title.innerHTML = "${wilders.name}";
 //     job.innerHTML = "Career Specialist";
 //     picture.src = "./src/assets/images/IntissarOthman.jpg"
-//     modal.classList.add("show-modal");
-// })
-
-// btn2.addEventListener("click", function(){
-//     title.innerHTML = "Anthony Gorski";
-//     job.innerHTML = "Instructor";
-//     picture.src = "./src/assets/images/AnthonyGorski.png"
-//     modal.classList.add("show-modal");
-// })
-
-// btn3.addEventListener("click", function(){
-//     title.innerHTML = "Enzo Castagnos";
-//     job.innerHTML = "Web developper";
-//     picture.src = "./src/assets/images/EnzoCastagnos.jpeg";
-//     modal.classList.add("show-modal");
-// })
-
-// btn4.addEventListener("click", function(){
-//     title.innerHTML = "Oyhana Mahjoubi";
-//     job.innerHTML = "Web developper";
-//     picture.src="./src/assets/images/OyhanaMahjoubi.png";
-//     modal.classList.add("show-modal");
-// })
-
-// btn5.addEventListener("click", function(){
-//     title.innerHTML = "Jeremy Dohin";
-//     job.innerHTML = "Web developper";
-//     picture.src="./src/assets/images/JeremyDohin.jpg";
-//     modal.classList.add("show-modal");
-// })
-
-// btn6.addEventListener("click", function(){
-//     title.innerHTML = "Kylian Gronier";
-//     job.innerHTML = "Web developper";
-//     picture.src="./src/assets/images/kylian.png";
 //     modal.classList.add("show-modal");
 // })
 

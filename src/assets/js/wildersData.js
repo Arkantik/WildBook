@@ -241,7 +241,7 @@ const wilders = [
     },
     {
         name:"Julien Richard",
-        picture:"./src/assets/images/JulienRichard.png",
+        picture:"./src/assets/images/JulienRichard.jpg",
         job:"Instructor",
         description:"",
         skills: {
