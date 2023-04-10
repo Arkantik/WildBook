@@ -7,13 +7,10 @@ function wildersCards({
 })  {
     return `
     <div class="profile-card">
-        <img class="imageronde" src="${picture}"
-            alt="Photo profil "${name}">
-        <div class="cardName">
-            <h2>${name}</h2>
-        </div>
-        <div class="personJob">
-            <h3>${job}</h3>
+        <div class="card">
+            <img class="imageronde" src="${picture}" alt="Photo profil "${name}">
+            <p class="cardName">${name}</p>
+            <p class="personJob">${job}</p>
         </div>
         <button class="viewmorebutton">View more</button>
     </div>`;
