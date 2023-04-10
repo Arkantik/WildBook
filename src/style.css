@@ -743,21 +743,13 @@ a {
     right: 10px;
     top: 10px;
     cursor: pointer;
-  }
+}
 
-  .closeBtn img {
+.closeBtn img {
     width: 30px;
     height: 30px;
-  }
-/* .show-modal{
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1.0);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-    z-index: 5;
-} */
+}
 
-/** Overlay */
 .overlay {
     pointer-events: none;
     opacity: 0;
@@ -771,13 +763,13 @@ a {
     height: 100%;
     z-index: 2;
     background-color: rgba(0,0,0,0.7);
-  }
+}
   
-  /** JS */
-  .is-visible {
+
+.is-visible {
     opacity: 1;
     pointer-events: auto;
-  }
+}
 
 
 

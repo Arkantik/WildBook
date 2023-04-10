@@ -143,9 +143,9 @@ cards.innerHTML = render(wilders);
 
 
 const modal = document.querySelector(".modal");
-const closeBtn = document.querySelector(".closeBtn");
 const btn = document.querySelector(".profile-card");
 const overlay = document.querySelector(".overlay");
+const closeBtn = document.querySelector(".closeBtn");
 
 btn.addEventListener("click", function() {
     overlay.classList.add("is-visible");
@@ -156,11 +156,6 @@ closeBtn.addEventListener('click', function() {
     overlay.classList.remove('is-visible');
     modal.classList.remove('is-visible');
   });
-
-// overlay.addEventListener("click", function() {
-//     overlay.classList.remove("is-visible");
-//     modal.classList.remove("is-visible");
-// });
 
 
 //////////////// NAV MOBILE ////////////////
